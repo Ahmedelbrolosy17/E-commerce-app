@@ -1,0 +1,33 @@
+.containerL{
+    height: calc(100vh - 72px);
+    background-image: url("https://assets-160c6.kxcdn.com/wp-content/uploads/2022/08/2022-08-09-en-de.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 20px
+}
+.intro{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: capitalize;
+    max-width: 40%;
+    animation-name: moving;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+.containerL::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .15);
+}
+@keyframes moving {
+    from{margin-left: 0;}
+    to{margin-left: 30px;}
+}
